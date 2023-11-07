@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet-de.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css"/>
+    <link rel="icon" href="/website-resources/icons/Crafti_Servi_Logo_1.png">
+    <title>Kontakt</title>
+</head>
+<body><script src="../js/script-de.js">
+        
+</script>
+    <header class="main-header" style="height:200px">
+        <div>
+            <img src="/website-resources/icons/Crafti_Servi_Logo_1.png" alt="">
+
+            <div></div>
+
+            <nav class="nav">
+                <a href="./index.html">About</a>
+                <a href="./join.html">Join</a>
+                <a href="./server.html">server</a>
+                <a href="./team.html">Team</a>
+                <a href="./contact.html"  class="active">Contact</a>
+            </nav>
+
+            <span class="material-symbols-outlined" id="btn" onclick="nav()">
+                menu
+            </span>
+        </div>
+
+
+        <div class="ip" onclick="copy()">
+            <h2>Server Adresse</h2>
+            <p id="server-ip">crafti-servi.com</p>
+        </div>
+    </header>
+    <div>
+        <select id="language-switcher", onclick="language_listener()">
+            <option data-value="en">English</option>
+            <option data-value="de" selected>Deutsch</option>
+        </select>
+    </div>
+
+    <div class="main-text" style="text-align: left;">
+        <div class="head">crafti servi</div>
+
+        <form action="../php/send_email.php" method="post">
+            <label for="from_email">Deine E-Mail</label><br>
+            <input type="email" id="from_email" placeholder="Deine E-Mail..." name="from_email" required><br>
+            
+            <label for="headline">Betreff:</label><br>
+            <input type="text" id="headline" placeholder="Betreff..." name="headline"><br>
+            
+            <label for="message">Text:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Nachricht..."></textarea><br><br>
+            
+            <input class="send" type="submit" value="E-mail Senden" style="background-color: #77bad8;color: white;height:50px;">
+        </form>
+        <br><br><br>
+        <div>
+            <h3>Feedback & Support: </h3>
+            <ul>
+                <li> <a id="email-info" class="clickable">info@crafti-servi.com</a></li>
+            </ul>
+            <h3>Business: </h3>
+            <ul>
+                <li> <a id="email-business" class="clickable">business@crafti-servi.com</a></li>
+            </ul>
+
+            <h3>Media & Design: </h3>
+            <ul>
+                <li> <a id="email-media" class="clickable">media@crafti-servi.com</a></li>
+            </ul>
+        </div>
+        <br><br>
+       
+    </div>
+    <div>
+        <footer>
+            <p>&copy; 2023 Crafti-Servi.com. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <style>
+        ::placeholder {
+            color: black !important;
+        }
+        input {
+            height: 30px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .send {
+            width: 100%;
+        }
+        input,
+        textarea {
+            padding: 10px;
+            width: calc(100% - 23px);
+            font-size: 18px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            border: 2px solid #77bad8;
+            box-shadow: -1px 0px 15px -2px #77bad8;;
+        }
+        label {
+            font-size: 18px;
+            height: 40px;
+            font-family: 'Merriweather', serif;
+            line-height: 40px;
+            margin-top: 35px !important;
+            text-transform: uppercase;
+        }
+        .head {
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 25px !important;
+            line-height: 50px;
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            background-color: #77bad8;
+            box-shadow: -1px 0px 15px -2px #77bad8;;
+        }
+        .main-text > div > h3 {
+            font-family: 'Merriweather', serif;
+            margin-bottom: 0px !important;
+            font-size: 20px;
+        }
+        .main-text > div > p{
+            margin-bottom:30px;
+            margin-top: 5px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .main-text > div > ul > li >a{
+            margin-bottom:30px;
+            margin-top: 5px;
+            color: #77bad8;;
+            font-size: 16px;
+            list-style: armenian;
+            text-decoration: none;
+            line-height: 25px;
+        }
+    </style>
+
+    <script>
+        const servers = [
+            {
+                name: "",
+                ip: "",
+                description: "",
+                plugins: "",
+                regeln: "",
+            }
+        ]
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+                var emailInfo = document.getElementById('email-info');
+                var emailBusiness = document.getElementById('email-business');
+                var emailMedia = document.getElementById('email-media');
+
+                emailInfo.addEventListener('click', function() {
+                        copyToClipboard(emailInfo.textContent);
+                        showCopiedVisualCue(emailInfo);
+                });
+
+                emailBusiness.addEventListener('click', function() {
+                        copyToClipboard(emailBusiness.textContent);
+                        showCopiedVisualCue(emailBusiness);
+                });
+
+                emailMedia.addEventListener('click', function() {
+                        copyToClipboard(emailMedia.textContent);
+                        showCopiedVisualCue(emailMedia);
+                });
+
+                function copyToClipboard(text) {
+                        if(text === "Kopiert!") {return;}
+                        var textarea = document.createElement('textarea');
+                        textarea.value = text;
+                        document.body.appendChild(textarea);
+                        textarea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textarea);
+                }
+
+                function showCopiedVisualCue(element) {
+                        var originalText = element.textContent;
+                        if(originalText === "Kopiert!") {return;}
+                        element.textContent = 'Kopiert!';
+                        element.classList.add('copied');
+                        setTimeout(function() {
+                        element.textContent = originalText;
+                        element.classList.remove('copied');
+                        }, 500);
+                }
+                });
+        </script>
+</body>
+</html>

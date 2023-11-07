@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet-de.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css"/>
+    <script src="https://kit.fontawesome.com/9642282600.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/website-resources/icons/Crafti_Servi_Logo_1.png">
+    <title>Team</title>
+</head>
+<body>
+    <header class="main-header" style="height:200px">
+        <div>
+            <img src="/website-resources/icons/Crafti_Servi_Logo_1.png" alt="">
+
+            <div></div>
+
+            <nav class="nav">
+                <a href="./index.html">About</a>
+                <a href="./join.html">Join</a>
+                <a href="./server.html">server</a>
+                <a href="./team.html"  class="active">Team</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+            <span class="material-symbols-outlined" id="btn" onclick="nav()">
+                menu
+            </span>
+        </div>
+
+
+        <div class="ip" onclick="copy()">
+            <h2>Server Adresse</h2>
+            <p id="server-ip">crafti-servi.com</p>
+        </div>
+    </header>
+    <div>
+        <select id="language-switcher", onclick="language_listener()">
+            <option data-value="en">English</option>
+            <option data-value="de" selected>Deutsch</option>
+            <!-- Add more flag options as needed -->
+        </select>
+    </div>
+
+    <div class="main-text" style="text-align: left;">
+        <div class="head">das Craft-Servi Team</div>
+        <div>
+            <br><br>
+            <div class="team">
+                <div>
+                    <img src="https://avatars.githubusercontent.com/u/111985746?v=4" alt="">
+                    <h2>x_Tornado10</h2>
+                    <p>Besitzer, Serverwartung und Programmierer (Java | Bash)</p>
+                </div>
+                <!--<div>
+                    <img src="https://yt3.googleusercontent.com/97-gmb2hbLDEEslHgKY2gEzWyJJin133mnU1fzmbVXSi3xSvcQgGc22HsRZE4Nsj9yZ6D1I2Ww=s176-c-k-c0x00ffffff-no-rj" alt="">
+                    <h2>x_Tornado10</h2>
+                    <p>Hey my name is x_Tornado10 aka ToxicStorm I'm 14 years old and upload a video every 2-3 weeks on this channel. Every Sub and Like is appreciated! My second channl: @ToxicStorm</p>
+                </div>-->
+                <div>
+                    <img src="https://www.crafti-servi.com/website-resources/icons/LUK4SXH.png" alt="">
+                    <h2>Luk4sxh</h2>
+                    <p>Kreativdesigner: Logos, Icons, Hintergründe, visuelle Gestaltung</p>
+                </div>
+                <div>
+                    <img src="https://avatars.githubusercontent.com/u/88653399?v=4" alt="">
+                    <h2>hannescam</h2>
+                    <p>Linux-Experte (Serverwartung) und Programmierer (C++ | C | Bash)</p>
+                </div>
+            </div>
+            <div class="team-socials">
+                <div>
+                    <a href="https://www.youtube.com/channel/UCZ6yDLIEvxQYEDOBV1g-ijA" class="fa-brands fa-youtube fa-2xl" style="color: #ff0000;"></a>
+                    <a href="https://github.com/ToxicStoxm" class="fa-brands fa-github fa-2xl" style="color: #ffffff;"></a> 
+                </div>
+                <div>
+                    <a href="https://discord.com/invite/5P2QJPbcgM" class="fa-brands fa-discord fa-2xl" style="color: #5865F2;"></a>
+                </div>
+                <div>
+                    <a href="https://github.com/hannescam" class="fa-brands fa-github fa-2xl" style="color: #ffffff;"></a> 
+                    <a href="https://hannes.crafti-servi.com/" class="fa-solid fa-link fa-2xl" style="color: #ffffff;"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+       
+    </div>
+    <div>
+        <footer>
+            <p>&copy; 2023 Crafti-Servi.com. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <style>
+         .team {
+            display: flex;
+            flex-direction: row;
+        }
+        .team-socials {
+            display: flex;
+            flex-direction: row;
+        }
+        .team-socials > div {
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .team-socials > div > a:hover {
+             opacity: 0.7;
+        }
+        .team-socials > div > a {
+            margin-top: 10%;
+            margin-left: 8%;
+            text-decoration: none;
+        }
+        .team > div {
+            width: 25%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .team > div > img {
+            width: 100%;
+        }
+        .team > div > a > img {
+            width: 100%;
+        }
+        .team > div > h2 {
+            text-align: center;
+        }
+        .team > div > p {
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .head {
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 25px !important;
+            line-height: 50px;
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            background-color: #77bad8;
+            box-shadow: -1px 0px 15px -2px #77bad8;;
+        }
+        .main-text > div > h3 {
+            font-family: 'Merriweather', serif;
+            margin-bottom: 0px !important;
+            font-size: 20px;
+        }
+        .main-text > div > p{
+            margin-bottom:30px;
+            margin-top: 5px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .main-text > div > ul > li >a{
+            margin-bottom:30px;
+            margin-top: 5px;
+            color: #77bad8;;
+            font-size: 16px;
+            list-style: armenian;
+            text-decoration: none;
+            line-height: 25px;
+        }
+    </style>
+
+<script src="../js/script-de.js">
+        
+    </script>
+</body>
+</html>

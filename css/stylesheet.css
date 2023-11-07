@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+.Fonts {
+    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;   
+}
+* {
+    font-family: 'Open Sans', sans-serif;   
+}
+body {
+    margin: 0px;
+    background-color: black;
+}
+footer {
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.clickable {
+    cursor: pointer;
+}
+.main-header {
+    height: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: inset 0px 0px 0px 5000px #00000056;
+    background-image: url(https://cdn.exputer.com/wp-content/uploads/2022/09/minecraft-wallpaper-2.jpeg.webp);
+}
+.main-header > div:first-child {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+.main-header > div:first-child > img {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+}
+.main-header > div:first-child > div {
+    width: 100%;
+}
+.main-header > div:first-child > nav {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.main-header > div:first-child > nav > a {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Merriweather', serif;
+    padding: 12px 24px;
+    background-color: transparent;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 45px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-left: 5px;
+}
+.main-header > div:first-child > nav > a:hover {
+    background:rgba(255, 255, 255, 0.185);;
+    backdrop-filter: blur(1.5px);
+}
+.active {
+    background:rgba(255, 255, 255, 0.185) !important;;
+    backdrop-filter: blur(1.5px) !important;
+}
+.main-header > div:last-child {
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    bottom: 0%;
+    background-color: #77bad8;
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    height: 100px;
+    text-align: center;
+    bottom: -50px;
+    box-shadow: -1px 0px 15px -2px #77bad8;;
+    cursor: pointer;
+}
+.main-header > div:last-child > h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 0px;
+}
+.main-header > div:last-child > p {
+    font-size: 17px;
+    color: #346a84;;
+    text-shadow: 0px 0px 3px #346a84;;;
+    transition:200ms;
+    margin: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.main-header > div:last-child:hover > p {
+    font-size: 20px;
+}
+.main-text {
+    padding-top: 100px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+.main-text > h1 {
+    font-size: 35px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.main-text > p {
+    text-align: center;
+    line-height: 22.5px;
+    margin-left: 5%;
+    width: 90%;
+}
+.material-symbols-outlined{
+    display: none !important;
+    background:rgba(255, 255, 255, 0.185);;
+    backdrop-filter: blur(1.5px);
+    font-size: 25px !important;
+}
+@media(max-width: 1200px) {
+    .main-text  {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .main-header > div:first-child {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media(max-width: 900px) {
+    .material-symbols-outlined {
+        display: block !important;
+        height: 40px;
+        width: 40px;
+        font-size: 30px !important;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        padding-bottom: 0px;
+        margin-top: 20px;
+    }
+    .main-header > div:first-child > nav {
+        position: fixed;
+        width: 100%;
+        top: 0%;
+        background-color: rgba(255, 255, 255, 0.7);
+        left: 0%;
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        z-index: 3;
+        height: 100vh;
+        margin-top: 0px;
+        display: none;
+    }
+    .main-header > div:first-child > nav > a {
+        width: 84%;
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-left: 2.5%;
+        color: black;
+    }
+}
+#language-switcher {
+    position: absolute;
+    background-color: black;
+    color: #77bad8;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+}
+#language-switcher-current {
+    position: absolute;
+    top: 13px;
+    left: 90px;
+    z-index: 9999;
+}
+#language-switcher-other1 {
+    position: absolute;
+    top: 13px;
+    left: 140px;
+    z-index: 9999;
+}
+#language-switcher-seperator {
+    position: absolute;
+    top: -8px;
+    left: 120px;
+    z-index: 9999;
+    color: white;
+}

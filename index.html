@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.9.2/css/flag-icons.min.css"/>
+    <link rel="flag-icons" href="./css/flag-icons.css"/>
+    <link rel="flag-icons.min" href="./css/flag-icons.min.css"/>
+    
+    <link rel="icon" href="/website-resources/icons/Crafti_Servi_Logo_1.png">
+    <title>Homepage</title>
+</head>
+<body><script src="/js/script.js">
+</script>
+    <header class="main-header">
+        <div>
+            <img src="/website-resources/icons/Crafti_Servi_Logo_1.png" alt="">
+
+            <div></div>
+
+            <nav class="nav">
+                <a href="./index.html" class="active">About</a>
+                <a href="./join.html">Join</a>
+                <a href="./server.html">Server</a>
+                <a href="./team.html">Team</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+            <span class="material-symbols-outlined" id="btn" onclick="nav()">
+                menu
+            </span>
+        </div>
+
+
+        <div class="ip" onclick="copy()">
+            <h2>Server address</h2>
+            <p id="server-ip">crafti-servi.com</p>
+        </div>
+    </header>
+    <div>
+        <select id="language-switcher", onclick="language_listener()">
+            <option data-value="en" selected>English</option>
+            <option data-value="de">Deutsch</option>
+            <!-- Add more flag options as needed -->
+        </select>
+    </div>
+
+    <div class="main-text">
+        <h1>Welcome to Crafti-Servi</h1>
+        <h2>What is Crafti-Servi?</h2>
+        <p>Crafti-Servi is a server network hosted by me (x_Tornado10). At its core, Crafti-Servi is a collection of survival servers (SMPs), such as SMP2023 and EternalSMP.</p>
+        
+        <h2>How Does Crafti-Servi Work?</h2>
+        <p>Crafti-Servi operates on a unique concept: the server changes every few months. For instance, from January to June 2023, we hosted SMP2023, and from July 2023 onwards, EternalSMP is the new adventure. This cycle ensures a steady stream of fresh content, keeping the excitement alive. Server rules are essential, and you can find them, along with how to join the current server, <a href="/join.html" style="color:#77bad8;">here.</a> Players often craft their own stories, build nations, and add their creative ideas to make the gameplay even more intriguing.</p>
+        
+        <h2>Is Crafti-Servi Free?</h2>
+        <p>Absolutely, Crafti-Servi is entirely free and has a strict no Pay-to-Win policy.</p>
+        
+        <h2>Who is behind Crafti-Servi?</h2>
+        <p>
+            Behind Crafti-Servi stands a small team consisting of 3 individuals. Each of us takes responsibility for specific areas and contributes to the overall project. Feel free to visit the links below to support our team!
+            <!--<ul>
+                <li><h4>x_Tornado10</h4> is the owner of Crafti-Servi and a programmer (Java | Bash).</li>
+                <li><h4>luk4sxh</h4> is our creative designer, responsible for logos, icons, backgrounds, and other visual elements.</li>
+                <li><h4>Hannes Campidell</h4> is a Linux expert and a programmer (C++ | C | Bash).</li>
+            </ul>-->
+            <h3>Explore our <a href="/team.html" style="color:#77bad8;">team members</a> and their contributions.</h3>
+        </p>
+    </div>
+    <div>
+        <footer>
+            <p>&copy; 2023 Crafti-Servi.com. All rights reserved.</p>
+        </footer>
+    </div>
+    <style>
+
+    .main-text > p {
+        text-align: left;
+        line-height: 22.5px;
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    </style>
+     <script>
+        const hasVisited = localStorage.getItem('hasVisited');
+
+        if (!hasVisited) {
+            const userLanguage = navigator.language.toLowerCase();
+
+            if (userLanguage === 'de') {
+                window.location.href = 'https://www.crafti-servi.com/de';
+            }
+
+            localStorage.setItem('hasVisited', 'true');
+        }
+    </script>
+</body>
+</html>
